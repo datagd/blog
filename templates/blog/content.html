@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}博文{% endblock %}
+{% block content %}
+<div class="row text-center vertical-middle-sm">
+    <h1>{{ article.title }}</h1>
+</div>
+<div class="row">
+        <p class="text-center"><span>{{ article.author.username }}</span><span style="margin-left:20px">{{ publish }}</span></p>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-md-8" > {{ article.body }}</div>
+
+    <div class="col-xs-12 col-md-4">
+         <h2>个人资料</h2>
+         <p>-当才华撑不起你的野心的时候，请努力！</p>
+         <img width="300px" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3893146502,314297687&fm=27&gp=0.jpg">
+    </div>
+</div>
+{% endblock %}

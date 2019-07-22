@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}首页{% endblock %}
+{% block content %}
+<div class="row text-center vertical-middle-sm">
+    <h1>我的博客</h1>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-8">
+    <u1>
+    {% for blog in blogs %}
+        <li><a href="{{ blog.id }}" >{{ blog.title }}</a></li>
+    {% endfor %}
+    </u1>
+    </div>
+    <div class="col-xs-6 col-md-4">
+        <h2>个人资料</h2>
+        <p>-当才华撑不起你的野心的时候，请努力！</p>
+        <img width="300px" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3893146502,314297687&fm=27&gp=0.jpg">
+    </div>
+</div>
+{% endblock %}
